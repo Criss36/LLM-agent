@@ -169,6 +169,7 @@ PagedAttention + Continuous Batching + Tensor Parallelism，QPS 从 20 提升到
 | **Chinese-LLaMA-Alpaca-3** | [ymcui/Chinese-LLaMA-Alpaca-3](https://github.com/ymcui/Chinese-LLaMA-Alpaca-3) | 中文LLaMA-3预训练/微调/推理/评测全流程代码 |
 | **llm-action** | [liguodongiot/llm-action](https://github.com/liguodongiot/llm-action) | 大模型训练/推理/压缩实战代码 |
 | **llm-action-notes** | [liguodongiot/llm-action](https://github.com/liguodongiot/llm-action) | 大模型训练/推理/压缩/评测实战教程笔记 |
+| **ai-agents-from-zero** | [didilili/ai-agents-from-zero](https://github.com/didilili/ai-agents-from-zero) | AI智能体开发教程和实战代码 |
 | **TRAINING_GUIDE.md** | 本项目 | 大模型训练方法、代码和硬件要求指南 |
 
 #### Chinese-LLaMA-Alpaca-3 核心功能
@@ -183,6 +184,7 @@ PagedAttention + Continuous Batching + Tensor Parallelism，QPS 从 20 提升到
 - **训练**: Alpaca-LoRA、ChatGLM-LoRA、QLoRA高效微调
 - **推理**: vLLM高性能推理、ChatGLM3本地推理
 - **压缩**: 模型量化、剪枝、知识蒸馏技术
+- **测试**: 高并发测试工具
 - **教程**: 完整的大模型工程化实战指南
 
 ```bash
