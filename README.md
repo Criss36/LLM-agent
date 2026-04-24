@@ -158,6 +158,32 @@ PagedAttention + Continuous Batching + Tensor Parallelism，QPS 从 20 提升到
 
 ---
 
+## 🐍 LLM 实战项目代码
+
+本仓库整合了多个优秀的开源大模型项目代码，便于学习和实战：
+
+### 📦 llm_projects/
+
+| 项目 | 来源 | 说明 |
+|------|------|------|
+| **Chinese-LLaMA-Alpaca-3** | [ymcui/Chinese-LLaMA-Alpaca-3](https://github.com/ymcui/Chinese-LLaMA-Alpaca-3) | 中文LLaMA-3预训练/微调/推理/评测全流程代码 |
+| **llm-action-notes** | [liguodongiot/llm-action](https://github.com/liguodongiot/llm-action) | 大模型训练/推理/压缩/评测实战教程笔记 |
+
+#### Chinese-LLaMA-Alpaca-3 核心功能
+
+- **训练**: LoRA/QLoRA微调，支持预训练和指令精调
+- **推理**: HuggingFace/vLLM推理，支持Flash Attention
+- **评测**: C-Eval/CMMLU/MMLU/LongBench评测
+- **合并**: LoRA权重合并脚本
+
+```bash
+# 查看项目详情
+cd llm_projects/Chinese-LLaMA-Alpaca-3
+cat README.md
+```
+
+---
+
 ## 👋 联系我
 
 - **GitHub**: [Criss36](https://github.com/Criss36)
