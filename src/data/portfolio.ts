@@ -165,27 +165,31 @@ export const blogPosts: BlogPost[] = [
 export const skills: Skill[] = [
   {
     category: '🧠 RAG 与检索',
-    items: ['LangChain / LangGraph', '知识图谱 RAG', 'Hybrid Search (BM25+向量)', 'BGE / Cohere Rerank', 'HyDE 假设文档', '向量数据库（Milvus / Chroma / Neo4j）'],
+    items: ['LangChain / LangGraph', '知识图谱 RAG', 'RAGFlow / Dify 平台', 'Hybrid Search (BM25+向量)', 'BGE / Cohere Rerank', 'HyDE 假设文档', '向量数据库（Milvus / Chroma / Neo4j）'],
   },
   {
     category: '🤖 Agent 与 MCP',
-    items: ['MCP 协议集成', 'CrewAI 多 Agent', 'LangGraph 状态机', 'Tool Calling / Function Calling', 'Supervisor / Plan-and-Execute 模式'],
+    items: ['MCP 协议集成', 'CrewAI 多 Agent', 'LangGraph 状态机', 'Tool Calling / Function Calling', 'Supervisor / Plan-and-Execute 模式', 'MCP 工具链（Playwright / GitHub / Filesystem）'],
   },
   {
     category: '🏛️ 中文底座模型',
-    items: ['ChatGLM / GLM-4（清华）', 'Qwen / Qwen2.5（阿里）', 'Yi（零一万物）', 'DeepSeek（深度求索）', 'InternLM（上海 AI Lab）', 'Baichuan（百川）'],
+    items: ['GLM-5.1 / GLM-4.7（智谱）', 'Qwen3 / Qwen2.5（阿里）', 'DeepSeek-R1 / V3（深度求索）', 'Yi-Lightning（零一万物）', 'InternLM3（上海 AI Lab）', 'Baichuan4（百川）'],
   },
   {
     category: '🔧 模型训练与微调',
-    items: ['LLaMA-Factory', 'ChatGLM-Efficient-Tuning', 'LoRA / QLoRA / Full-tuning', 'DeepSpeed ZeRO', ' Axital 模型量化'],
+    items: ['LLaMA-Factory', 'ChatGLM-Efficient-Tuning', 'LoRA / QLoRA / Full-tuning', 'DeepSpeed ZeRO', 'Axital 模型量化', 'Unsloth 高效训练'],
   },
   {
     category: '⚡ 推理部署',
-    items: ['vLLM / TGI', 'PagedAttention', 'Continuous Batching', 'Tensor Parallelism', 'SLoRA 多租户'],
+    items: ['vLLM / TGI', 'PagedAttention', 'Continuous Batching', 'Tensor Parallelism', 'SLoRA 多租户', 'Kubernetes 推理集群'],
+  },
+  {
+    category: '👁️ 多模态',
+    items: ['GLM-5V-Turbo 视觉编程', 'Qwen-VL / InternVL', 'Design2Code 评估', '图片理解与生成'],
   },
   {
     category: '📊 评测',
-    items: ['C-Eval / FlagEval / OpenCompass', 'RAGAS / DeepEval', 'G-Eval / LLM-as-Judge', 'LangSmith', 'GitHub Actions CI/CD'],
+    items: ['C-Eval / FlagEval / OpenCompass', 'RAGAS / DeepEval', 'G-Eval / LLM-as-Judge', 'LangSmith / LangFuse', 'SWE-bench / Live CodeBench', 'GitHub Actions CI/CD'],
   },
   {
     category: '🏥 垂直领域',
@@ -193,7 +197,7 @@ export const skills: Skill[] = [
   },
   {
     category: '🛠 工程基础设施',
-    items: ['FastAPI + Docker', 'Redis / PostgreSQL', '异步处理（asyncio）', 'Pydantic 数据校验', 'Git 工作流'],
+    items: ['FastAPI + Docker', 'Redis / PostgreSQL', '异步处理（asyncio）', 'Pydantic 数据校验', 'Git 工作流', 'GitHub Pages 部署'],
   },
 ];
 
@@ -206,17 +210,38 @@ export const timeline = [
   { period: '2025.Q2', event: 'vLLM 部署，QPS 从 20 提升到 120' },
   { period: '2025.Q3', event: '医疗/法律垂直领域 RAG 落地，覆盖 10+ 场景' },
   { period: '2025.Q4', event: 'GitHub Actions 评测流水线，PR 自动回归' },
+  { period: '2026.Q1', event: 'GLM-5.1 / DeepSeek-R1 国产模型能力跃升跟进' },
+  { period: '2026.Q2', event: '个人主页重构，集成交互式 RAG/Agent/Eval Demo' },
 ];
 
 export const models: Model[] = [
-  { name: 'ChatGLM', provider: '清华', params: '6B/12B', context: '32K', commercial: true },
-  { name: 'GLM-4', provider: '清华', params: '9B/128B', context: '128K', commercial: true },
+  // === 智谱 AI ===
+  { name: 'GLM-5.1', provider: '智谱 AI', params: 'MoE 744B', context: '128K', commercial: true },
+  { name: 'GLM-5V-Turbo', provider: '智谱 AI', params: '多模态视觉', context: '128K', commercial: true },
+  { name: 'GLM-4.7', provider: '智谱 AI', params: '355B', context: '128K', commercial: true },
+  // === 深度求索 ===
+  { name: 'DeepSeek-R1', provider: '深度求索', params: '671B MoE', context: '128K', commercial: true },
+  { name: 'DeepSeek-V3', provider: '深度求索', params: '671B MoE', context: '128K', commercial: true },
+  { name: 'DeepSeek-V2', provider: '深度求索', params: '236B MoE', context: '128K', commercial: true },
+  // === 阿里通义 ===
+  { name: 'Qwen3', provider: '阿里', params: '0.5B-235B MoE', context: '128K', commercial: true },
   { name: 'Qwen2.5', provider: '阿里', params: '7B-72B', context: '128K', commercial: true },
+  // === 零一万物 ===
+  { name: 'Yi-Lightning', provider: '零一万物', params: 'MoE', context: '128K', commercial: true },
   { name: 'Yi', provider: '零一万物', params: '6B/34B', context: '200K', commercial: true },
-  { name: 'DeepSeek-V2', provider: '深度求索', params: '236B', context: '128K', commercial: true },
+  // === 上海 AI Lab ===
+  { name: 'InternLM3', provider: '上海 AI Lab', params: '8B/104B', context: '128K', commercial: true },
   { name: 'InternLM2', provider: '上海 AI Lab', params: '7B/20B', context: '200K', commercial: true },
+  // === 百川 ===
+  { name: 'Baichuan4', provider: '百川', params: 'MoE', context: '128K', commercial: true },
   { name: 'Baichuan2', provider: '百川', params: '7B/13B', context: '128K', commercial: true },
+  // === 其他国产 ===
   { name: 'MiniMax-Text-01', provider: 'MiniMax', params: '456B', context: '1M', commercial: true },
+  { name: 'Step-2', provider: '阶跃星辰', params: '万亿 MoE', context: '128K', commercial: true },
+  { name: 'Doubao-Pro', provider: '字节跳动', params: 'MoE', context: '128K', commercial: true },
+  // === 国际参考 ===
+  { name: 'Claude Opus 4.6', provider: 'Anthropic', params: 'unknown', context: '200K', commercial: true },
+  { name: 'GPT-4o', provider: 'OpenAI', params: 'unknown', context: '128K', commercial: true },
 ];
 
 export const frameworks: Framework[] = [

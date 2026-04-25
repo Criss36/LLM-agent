@@ -63,7 +63,7 @@ export default memo<Props>(({ list }) => (
   >
     <div className="absolute inset-0 bg-grid opacity-20 pointer-events-none" />
     <div className="relative max-w-6xl mx-auto">
-      <div className="section-label mb-10">02 — CHINESE LLM MODELS</div>
+      <div className="section-label mb-10" id="models-heading">02 — CHINESE LLM MODELS</div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {list.map((model, i) => (
           <ModelCard key={model.name} model={model} index={i} />

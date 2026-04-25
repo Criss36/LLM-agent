@@ -1,10 +1,3 @@
-export interface Message {
-  id: string;
-  role: 'user' | 'assistant' | 'system';
-  content: string;
-  timestamp: Date;
-}
-
 export interface Demo {
   id: string;
   title: string;

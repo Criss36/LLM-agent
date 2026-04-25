@@ -2,7 +2,6 @@
    NEURAL INTERFACE — Sci-fi AI Engineer Portfolio
    ════════════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -390,10 +389,4 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height
   border-color: rgba(0,217,255,0.3);
   box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,217,255,0.12) inset;
   transform: translateY(-2px);
-}
-
-/* ── Focus visible ────────────────────────────────────────────── */
-:focus-visible {
-  outline: 2px solid var(--cyan);
-  outline-offset: 3px;
 }

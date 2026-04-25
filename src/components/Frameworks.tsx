@@ -91,7 +91,7 @@ export default memo<Props>(({ frameworks, evaluations }) => (
     <div className="relative max-w-6xl mx-auto">
       {/* Frameworks Section */}
       <div className="mb-16">
-        <div className="section-label mb-8">03 — FRAMEWORKS & TOOLS</div>
+        <div className="section-label mb-8" id="frameworks-heading">03 — FRAMEWORKS & TOOLS</div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {frameworks.map((fw, i) => (
             <FrameworkCard key={fw.name} fw={fw} index={i} />

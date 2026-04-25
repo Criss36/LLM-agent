@@ -121,7 +121,7 @@ const Projects = memo<Props>(({ list }) => (
   >
     <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
     <div className="relative max-w-6xl mx-auto">
-      <div className="section-label mb-10">01 — PROJECTS</div>
+      <div className="section-label mb-10" id="projects-heading">01 — PROJECTS</div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {list.map((demo, i) => (
           <ProjectCard key={demo.id} demo={demo} index={i} />

@@ -11,7 +11,7 @@ const STATS = [
 
 const Hero = memo(() => {
   const [started, setStarted] = useState(false);
-  const { v } = useInView({ threshold: 0.05 });
+  const { ref, v } = useInView({ threshold: 0.05 });
   const typed = useTyping(
     '> systems initialized. building production-ready llm applications.',
     38,
@@ -22,6 +22,7 @@ const Hero = memo(() => {
 
   return (
     <section
+      ref={ref}
       id="top"
       className="relative min-h-screen flex flex-col justify-center bg-grid bg-grid-radial overflow-hidden"
       aria-label="个人介绍"
