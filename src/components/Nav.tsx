@@ -1,4 +1,4 @@
-import { useState, useCallback, memo } from 'react';
+import { useState, useCallback, useEffect, memo } from 'react';
 import { useTheme } from './hooks/useTheme';
 
 const THEMES = [
@@ -27,10 +27,10 @@ const Nav = memo(() => {
   }, []);
 
   // Attach scroll listener once
-  useState(() => {
+  useEffect(() => {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  });
+  }, [onScroll]);
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
